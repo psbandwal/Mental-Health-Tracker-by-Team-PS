@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register - VibeWell</title>
+  <!-- <link rel="stylesheet" href="auth.css" /> -->
+
+
+  <style>
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      
+      body.auth-body {
+        font-family: 'Segoe UI', sans-serif;
+        background-image: url('https://lewybodydementia.home.blog/wp-content/uploads/2018/11/s-1e8ad7ca05b9e655205b27c87131624539ff9139.gif?w=832&h=369'); /* Use your own image if needed */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      
+      .auth-container {
+        background-color: rgba(32, 32, 59, 0.85); /* Semi-transparent white */
+        padding: 2rem;
+        border-radius: 18px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        width: 100%;
+        max-width: 400px;
+        backdrop-filter: blur(1px); /* Optional: Adds a blur effect to background */
+      }
+      
+      
+      .auth-container h2 {
+        text-align: center;
+        margin-bottom: 1.5rem;
+        color: #21de31;
+      }
+      
+      form input {
+        width: 100%;
+        padding: 12px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+      }
+      
+      form input:focus {
+        border-color: #3a7ca5;
+        outline: none;
+      }
+      
+      form button {
+        width: 100%;
+        padding: 12px;
+        background-color: #225f27;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      
+      form button:hover {
+        background-color: #0c5012;
+      }
+      
+      form p {
+        text-align: center;
+        margin-top: 1rem;
+        color: #faeb7d;
+      }
+      
+      form a {
+        color: #45da00;
+        text-decoration: none;
+      }
+      
+      form a:hover {
+        text-decoration: underline;
+      }
+      
+  </style>
+</head>
+<body class="auth-body">
+  <div class="auth-container">
+    <h2>Register</h2>
+    <form id="registerForm">
+      <input type="text" id="name" placeholder="Full Name" required />
+      <input type="email" id="regEmail" placeholder="Email" required />
+      <input type="password" id="regPassword" placeholder="Password" required />
+      <button type="submit">Register</button>
+      <p>Already have an account? <a href="login.html">Login</a></p>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('registerForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('regEmail').value;
+
+
+
+
+     
+
+      alert(`Welcome ${name}! Your account has been created.`);
+      window.location.href = "login.html"; // Redirect to login page
+    });
+
+
+
+  </script>
+</body>
+</html>
